@@ -16,6 +16,13 @@ const reviewSchema = new mongoose.Schema(
       required: true,
     },
 
+    // 리뷰 제목
+    title: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+
     // 평점 (1~5점)
     rating: {
       type: Number,
@@ -28,6 +35,12 @@ const reviewSchema = new mongoose.Schema(
     content: {
       type: String,
       required: true,
+    },
+
+    // 구매 시 선택한 사이즈 (선택값)
+    size: {
+      type: Number,
+      required: false,
     },
   },
   {

@@ -1,140 +1,23 @@
 :root {
-  --bg: #f3f3f3;
-  --panel: #f3f3f3;
-  --text: #111111;
-  --muted: #757575;
-  --border: #cfcfcf;
-  --primary: #222222;
+  --text: #111;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: #fff;
 }
 
 .app-shell {
   min-height: 100vh;
-  background: var(--bg);
+  background: #fff;
 }
 
-.page {
-  min-height: calc(100vh - 70px);
-  background: var(--bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 48px 16px 64px;
-}
-
-.home-mode {
-  text-align: center;
-}
-
-.home-hero h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.home-hero p {
-  color: var(--muted);
-  margin: 0;
-}
-
-.login-page {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.login-panel {
-  width: min(520px, 100%);
-  background: var(--panel);
-  padding: 24px 12px;
-}
-
-.title {
-  text-align: center;
-  font-size: 36px;
-  font-weight: 700;
-  margin: 0 0 28px;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.field input {
-  width: 100%;
-  padding: 18px 16px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: #ffffff;
-  font-size: 16px;
-  color: var(--text);
-}
-
-.field input:focus {
-  outline: none;
-  border-color: #b5b5b5;
-  box-shadow: 0 0 0 1px #b5b5b5 inset;
-}
-
-.help-row {
-  margin-top: -6px;
-}
-
-.ghost-link {
-  background: none;
-  border: none;
-  padding: 0;
-  font-size: 14px;
-  color: var(--muted);
-  cursor: pointer;
-}
-
-.submit {
-  margin-top: 6px;
-  width: 100%;
-  padding: 18px;
-  border: none;
-  border-radius: 8px;
-  background: var(--primary);
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.submit:disabled {
-  opacity: 0.85;
-  cursor: not-allowed;
-}
-
-.status {
-  margin-top: 12px;
-  padding: 12px 14px;
-  border-radius: 8px;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.status.success {
-  background: #effaf3;
-  color: #226437;
-  border: 1px solid #c9efd7;
-}
-
-.status.error {
-  background: #fff1f1;
-  color: #b42318;
-  border: 1px solid #ffd5d5;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
+a { color: inherit; }

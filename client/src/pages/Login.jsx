@@ -20,7 +20,10 @@ function Login() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || "로그인에 실패했습니다.");
-      setStatus({ type: "success", message: data.message || "로그인에 성공했습니다." });
+      setStatus({
+        type: "success",
+        message: data.message || "로그인에 성공했습니다.",
+      });
     } catch (err) {
       setStatus({ type: "error", message: err.message });
     } finally {
@@ -61,7 +64,9 @@ function Login() {
           <button className="submit" type="submit" disabled={loading}>
             {loading ? "로그인 중..." : "로그인"}
           </button>
-          {status && <div className={`status ${status.type}`}>{status.message}</div>}
+          {status && (
+            <div className={`status ${status.type}`}>{status.message}</div>
+          )}
         </form>
       </div>
     </div>

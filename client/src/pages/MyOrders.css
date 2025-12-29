@@ -1,0 +1,264 @@
+.mypage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mypage-container {
+  width: min(1200px, 100%);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+}
+
+.mypage-nav {
+  background: #f7f7f7;
+  border: 1px solid #d9d9d9;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mypage-nav .nav-title {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.mypage-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+  color: #303030;
+}
+
+.mypage-nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mypage-nav li.active {
+  font-weight: 700;
+  color: #1a2f8a;
+}
+
+.mypage-nav li.muted {
+  color: #888;
+}
+
+.mypage-content {
+  background: #ffffff;
+  padding: 4px 2px 12px;
+}
+
+.mypage-heading {
+  margin: 0 0 12px;
+  font-size: 26px;
+}
+
+.order-state {
+  padding: 16px;
+  color: #4b4b4b;
+  font-size: 15px;
+}
+
+.order-error {
+  padding: 14px 16px;
+  background: #fff1f1;
+  color: #b42318;
+  border: 1px solid #ffd5d5;
+  border-radius: 6px;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-card {
+  background: #b0abac;
+  border-radius: 4px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 14px;
+}
+
+.order-left {
+  color: #1a2f8a;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.order-right {
+  color: #1a2f8a;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+  font-size: 15px;
+}
+
+.order-line strong {
+  font-weight: 800;
+}
+
+.order-actions {
+  margin-top: 6px;
+}
+
+.review-button {
+  padding: 12px 18px;
+  background: #4e88d3;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.review-button:hover {
+  background: #3d79c7;
+}
+
+.review-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 300;
+}
+
+.review-modal {
+  width: min(520px, 100%);
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 18px 18px 16px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+}
+
+.review-modal-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.review-product {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.review-meta {
+  color: #5a5a5a;
+  font-size: 13px;
+}
+
+.close-button {
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.review-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.review-field input,
+.review-field select,
+.review-field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fafafa;
+}
+
+.review-field textarea {
+  resize: vertical;
+}
+
+.review-status {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.review-status.success {
+  background: #effaf3;
+  color: #1f6b3f;
+  border: 1px solid #c3ebd2;
+}
+
+.review-status.error {
+  background: #fff1f1;
+  color: #b42318;
+  border: 1px solid #ffd5d5;
+}
+
+.review-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.review-actions .ghost,
+.review-actions .primary {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #d5d5d5;
+  background: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.review-actions .primary {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+}
+
+.review-actions .primary:disabled {
+  opacity: 0.85;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .mypage-container {
+    grid-template-columns: 1fr;
+  }
+
+  .order-card {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+  }
+
+  .order-right {
+    align-items: flex-start;
+  }
+}
